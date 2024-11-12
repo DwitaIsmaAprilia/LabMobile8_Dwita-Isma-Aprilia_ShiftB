@@ -36,7 +36,7 @@ Fungsi tambahMahasiswa ini merupakan bagian dari **operasi Create** dalam CRUD, 
 
 ## Halaman Tampilan Edit Mahasiswa
 ![Lampiran Tampilan Edit](halaman_edit.png)
-Fungsi editMahasiswa() ini digunakan untuk memperbarui data mahasiswa yang sudah ada dalam sistem. Fungsi ini merupakan bagian dari **operasi Update** dalam konsep CRUD. Berikut adalah penjelasan dari proses yang terjadi dalam fungsi ini:
+Fungsi editMahasiswa() ini digunakan untuk **memperbarui data** mahasiswa yang sudah ada dalam sistem. Fungsi ini merupakan bagian dari **operasi Update** dalam konsep CRUD. Berikut adalah penjelasan dari proses yang terjadi dalam fungsi ini:
 
 Fungsi editMahasiswa()
 1. Menyiapkan Data yang Akan Diperbarui
@@ -67,7 +67,7 @@ Rangkuman Proses
 
 ## Halaman Tampilan Hapus Mahasiswa
 ![Lampiran Tampilan Hapus](konfirmasi-hapus.png)
-Fungsi hapusMahasiswa() ini bertujuan untuk menghapus data mahasiswa dari sistem. Fungsi ini merupakan bagian dari operasi Delete dalam konsep CRUD. Berikut adalah penjelasan proses yang terjadi dalam fungsi ini:
+Fungsi hapusMahasiswa() ini bertujuan untuk **menghapus data** mahasiswa dari sistem. Fungsi ini merupakan bagian dari **operasi Delete** dalam konsep CRUD. Berikut adalah penjelasan proses yang terjadi dalam fungsi ini:
 
 Fungsi hapusMahasiswa(id: any)
 1. Mempersiapkan Data yang Akan Dihapus
