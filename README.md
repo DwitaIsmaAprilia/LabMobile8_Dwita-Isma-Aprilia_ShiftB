@@ -29,8 +29,7 @@ Fungsi tambahMahasiswa ini merupakan bagian dari **operasi Create** dalam CRUD, 
 2. Menyiapkan data mahasiswa dalam bentuk objek
 3. Mengirim data ke server dengan metode POST
 4. Menanggapi respons server untuk mengonfirmasi keberhasilan atau kegagalan penambahan data
-
-Fungsi ini juga diintegrasikan dengan antarmuka pengguna untuk menutup modal dan memperbaharui daftar data mahasiswa setelah penambahan berhasil.
+</br>Fungsi ini juga diintegrasikan dengan antarmuka pengguna untuk menutup modal dan memperbaharui daftar data mahasiswa setelah penambahan berhasil.
 
 ## Halaman Tampilan Setelah Tambah Mahasiswa
 ![Lampiran Tampilan Setelah Tambah](setelah_ditambah.png)
@@ -68,3 +67,36 @@ Rangkuman Proses
 
 ## Halaman Tampilan Hapus Mahasiswa
 ![Lampiran Tampilan Hapus](konfirmasi-hapus.png)
+Fungsi hapusMahasiswa() ini bertujuan untuk menghapus data mahasiswa dari sistem. Fungsi ini merupakan bagian dari operasi Delete dalam konsep CRUD. Berikut adalah penjelasan proses yang terjadi dalam fungsi ini:
+
+Fungsi hapusMahasiswa(id: any)
+1. Mempersiapkan Data yang Akan Dihapus
+</br>Fungsi ini menerima parameter id, yaitu ID mahasiswa yang ingin dihapus.
+</br>ID ini akan digunakan sebagai penanda unik agar API dapat mengetahui data mahasiswa mana yang harus dihapus.
+2. Mengirim Permintaan Hapus ke API
+</br>Fungsi this.api.hapus(id, 'hapus.php?id=') digunakan untuk mengirim permintaan hapus ke endpoint API hapus.php.
+</br>Endpoint hapus.php?id= diikuti oleh id akan membentuk URL lengkap untuk menentukan data mahasiswa mana yang akan dihapus.
+</br>this.api.hapus() mengirim permintaan HTTP DELETE atau GET ke server untuk menghapus data yang sesuai.
+3. Menangani Respons API
+</br>Jika penghapusan berhasil (respons sukses), blok next akan dipanggil:
+</br>Menampilkan pesan 'sukses' beserta respons (res) di console.
+</br>Memanggil getMahasiswa() untuk memperbarui daftar mahasiswa di tampilan, sehingga data yang baru saja dihapus tidak lagi muncul.
+</br>Menampilkan pesan 'berhasil hapus data' di console.
+</br>Jika ada kesalahan dalam proses penghapusan, blok error akan dipanggil dan menampilkan pesan 'gagal' di console.
+
+Rangkuman Proses
+Fungsi hapusMahasiswa() melakukan langkah-langkah berikut:
+1. Menerima ID mahasiswa yang akan dihapus.
+2. Mengirim permintaan hapus ke API melalui endpoint hapus.php.
+3. Menangani respons dari server untuk memastikan penghapusan berhasil atau gagal.
+4. Memperbarui antarmuka pengguna dengan memperbarui daftar mahasiswa yang ditampilkan.
+</br>Fungsi ini melengkapi operasi Delete dalam aplikasi, memungkinkan data mahasiswa yang tidak diperlukan lagi untuk dihapus dari sistem.
+
+
+
+
+
+
+
+
+
