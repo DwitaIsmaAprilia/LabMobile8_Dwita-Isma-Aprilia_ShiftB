@@ -8,6 +8,7 @@ Fungsi tambahMahasiswa ini merupakan agian dari operasi Create dalam CRUD, yang 
 2. Menyiapkan data mahasiswa dalam bentuk objek
 3. Mengirim data ke server dengan metode POST
 4. Menanggapi respons server untuk mengonfirmasi keberhasilan atau kegagalan penambahan data
+
 Fungsi ini juga diintegrasikan dengan antarmuka pengguna untuk menutup modal dan memperbaharui daftar data mahasiswa setelah penambahan berhasil.
 
 ## Halaman Tampilan Setelah Tambah Mahasiswa
