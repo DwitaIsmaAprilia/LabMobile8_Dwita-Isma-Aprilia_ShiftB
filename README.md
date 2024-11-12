@@ -16,11 +16,34 @@ Fungsi ini juga diintegrasikan dengan antarmuka pengguna untuk menutup modal dan
 
 ## Halaman Tampilan Edit Mahasiswa
 ![Lampiran Tampilan Edit](halaman_edit.png)
-Fungsi editMahasiswa ini digunakan untuk memperbarui data mahasiswa yang sudah ada dalam sistem. Fungsi ini merupakan bagian dari **operasi Update** dalam konsep CRUD. Berikut adalah penjelasan dari proses yang terjadi dalam fungsi ini:
-1. Menyiapkan data yang akan diperbarui
--Fungsi ini membuat objek data yang berisi properti id, nama, dan jurusan.
--id merupakan penanda unik untuk mahasiswa yang ingin diperbarui, sementara nama dan jurusan adalah informasi yang akan diubah.
+Fungsi editMahasiswa() ini digunakan untuk memperbarui data mahasiswa yang sudah ada dalam sistem. Fungsi ini merupakan bagian dari operasi Update dalam konsep CRUD. Berikut adalah penjelasan dari proses yang terjadi dalam fungsi ini:
 
+Fungsi editMahasiswa()
+Menyiapkan Data yang Akan Diperbarui
+
+Fungsi ini membuat objek data yang berisi properti id, nama, dan jurusan.
+id merupakan penanda unik untuk mahasiswa yang ingin diperbarui, sementara nama dan jurusan adalah informasi yang akan diubah.
+Mengirim Data ke API
+
+Fungsi this.api.edit(data, 'edit.php') digunakan untuk mengirimkan data mahasiswa yang telah diperbarui ke endpoint API edit.php.
+this.api.edit() mengirim permintaan HTTP POST atau PUT ke server untuk melakukan pembaruan data mahasiswa di server.
+Menangani Respons API
+
+Jika pembaruan berhasil (respons sukses), blok next akan dipanggil:
+Menampilkan hasil (hasil) yang diterima dari server ke console.
+Memanggil resetModal() untuk mereset data input agar siap untuk penggunaan berikutnya.
+Memanggil getMahasiswa() untuk memperbarui daftar mahasiswa yang ditampilkan di layar.
+Menampilkan pesan 'berhasil edit Mahasiswa' di console.
+Mengatur modalEdit menjadi false dan menutup modal dengan this.modal.dismiss().
+Jika ada kesalahan dalam proses pembaruan, blok error akan dipanggil untuk menampilkan pesan 'gagal edit Mahasiswa' di console.
+Rangkuman Proses
+Fungsi editMahasiswa() melakukan langkah-langkah berikut:
+
+Menyiapkan data mahasiswa yang akan diperbarui dengan memasukkan ID, nama, dan jurusan.
+Mengirim data ke API untuk pembaruan menggunakan endpoint edit.php.
+Menangani respons dari server untuk memastikan pembaruan berhasil atau gagal.
+Memperbarui antarmuka pengguna dengan mengosongkan modal dan memperbarui daftar data mahasiswa.
+Fungsi ini sangat penting untuk proses Update pada aplikasi, memastikan data mahasiswa yang ada dapat dimodifikasi sesuai kebutuhan.
 ## Halaman Tampilan Setelah Edit Mahasiswa
 ![Lampiran Tampilan Setelah Edit](setelah_diedit.png)
 
