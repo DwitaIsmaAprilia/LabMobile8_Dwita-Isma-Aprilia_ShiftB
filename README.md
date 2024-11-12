@@ -3,7 +3,7 @@
 
 ## Halaman Tampilan Tambah Mahasiswa
 ![Lampiran Tampilan Tambah](tambah_mahasiswa.png)
-Fungsi tambahMahasiswa ini merupakan agian dari operasi Create dalam CRUD, yang mengirim data baru ke server untuk ditambahkan. Langkah-langkah utama yang dilakukan adalah:
+Fungsi tambahMahasiswa ini merupakan agian dari **operasi Create** dalam CRUD, yang mengirim data baru ke server untuk ditambahkan. Langkah-langkah utama yang dilakukan adalah:
 1. Memvalidasi data input
 2. Menyiapkan data mahasiswa dalam bentuk objek
 3. Mengirim data ke server dengan metode POST
@@ -16,6 +16,10 @@ Fungsi ini juga diintegrasikan dengan antarmuka pengguna untuk menutup modal dan
 
 ## Halaman Tampilan Edit Mahasiswa
 ![Lampiran Tampilan Edit](halaman_edit.png)
+Fungsi editMahasiswa ini digunakan untuk memperbarui data mahasiswa yang sudah ada dalam sistem. Fungsi ini merupakan bagian dari **operasi Update** dalam konsep CRUD. Berikut adalah penjelasan dari proses yang terjadi dalam fungsi ini:
+1. Menyiapkan data yang akan diperbarui
+-Fungsi ini membuat objek data yang berisi properti id, nama, dan jurusan.
+-id merupakan penanda unik untuk mahasiswa yang ingin diperbarui, sementara nama dan jurusan adalah informasi yang akan diubah.
 
 ## Halaman Tampilan Setelah Edit Mahasiswa
 ![Lampiran Tampilan Setelah Edit](setelah_diedit.png)
